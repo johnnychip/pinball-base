@@ -7,6 +7,7 @@ public class BumperGroup : MonoBehaviour {
 	[SerializeField]
 	private  List<ToggleBumper> bumpersList;
 
+	[SerializeField]
 	private int bumpersOn;
 
 	// Use this for initialization
@@ -35,6 +36,7 @@ public class BumperGroup : MonoBehaviour {
 
 	private void RestartBumpers()
 	{
+		bumpersOn = 0;
 		foreach(ToggleBumper bumper in bumpersList ){
 			bumper.RestartColor();
 		}

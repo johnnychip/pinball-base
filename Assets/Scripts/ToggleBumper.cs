@@ -25,12 +25,13 @@ public class ToggleBumper : Bumper {
 	public override void WhenItCollides ()
 	{
 		if (mySpriteRender.color == offColor) {
-			myBumperGroup.OneMoreIsOn ();
 			mySpriteRender.color = onColor;
+			myBumperGroup.OneMoreIsOn ();
+		
 		
 		} else {
-			myBumperGroup.OneMoreIsOff ();
 			mySpriteRender.color = offColor;
+			myBumperGroup.OneMoreIsOff ();
 		}
 	}
 
